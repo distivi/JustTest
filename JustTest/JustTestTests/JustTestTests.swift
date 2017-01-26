@@ -21,15 +21,49 @@ class JustTestTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //MARK: - API
+    
+    func testApiGetCarsList() {
+        runAsyncTest(description: "API: Get Cars List") { (expectation) -> (Void) in
+            
+            Engine.sharedInstance.apiMamanger.getCarsList(withPage: 0, pageSize: 15) { (json, error) -> (Void) in
+                XCTAssertNotNil(json)
+                XCTAssertNil(error)
+                expectation.fulfill()
+            }
+        }
+    }
+    
+    func testApiGetCarTypes() {
+        runAsyncTest(description: "API: Get Ford types") { (expectation) -> (Void) in
+            let fordId = 285
+            Engine.sharedInstance.apiMamanger.getCarType(withCarId: fordId, page: 0, pageSize: 15, callback: { (json, error) -> (Void) in
+                XCTAssertNotNil(json)
+                XCTAssertNil(error)
+                expectation.fulfill()
+            })
+        }
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+        }
+    }
+    
+    //MARK: - Helpers
+    
+    
+    func runAsyncTest(description: String, testCode: @escaping (XCTestExpectation) -> (Void))  {
+        let asyncExpectation = expectation(description: description)
+        
+        testCode(asyncExpectation)
+        
+        waitForExpectations(timeout: 5) { error in
+            if let error = error {
+                XCTFail("waitForExpectationsWithTimeout errored: \(error)")
+            }
         }
     }
     
