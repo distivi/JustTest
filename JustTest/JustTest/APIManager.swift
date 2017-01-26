@@ -6,7 +6,7 @@
 //  Copyright © 2017 JustStan. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import Alamofire
 
 class APIManager: NSObject {
@@ -17,16 +17,16 @@ class APIManager: NSObject {
     
     //MARK: - API calls
     
-    func getCarsList(withPage page: Int, pageSize: Int, callback: @escaping (Any?, Error?) -> (Void))  {
+    func getManufacturersList(withPage page: Int, pageSize: Int, callback: @escaping (Any?, Error?) -> (Void))  {
         let apiCall = String("rerutcafunam/sepyt-rac/1v".characters.reversed())
         let parameters: Parameters = ["page": page, "pageSize": pageSize]
         
         self.runApiCall(apiCall: apiCall, params: parameters, callback: callback)
     }
     
-    func getCarType(withCarId carID: Int, page: Int, pageSize: Int, callback: @escaping (Any?, Error?) -> (Void))  {
+    func getModelTypes(withManufacturerId manufacturerID: String, page: Int, pageSize: Int, callback: @escaping (Any?, Error?) -> (Void))  {
         let apiCall = String("sepyt-niam/sepyt-rac/1v".characters.reversed())
-        let parameters: Parameters = ["manufacturer": carID, "page": page, "pageSize": pageSize]
+        let parameters: Parameters = ["manufacturer": manufacturerID, "page": page, "pageSize": pageSize]
         
         self.runApiCall(apiCall: apiCall, params: parameters, callback: callback)
     }

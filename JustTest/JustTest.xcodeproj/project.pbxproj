@@ -19,6 +19,12 @@
 		F6FA23401E3A0C14006EA42B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA233F1E3A0C14006EA42B /* APIManager.swift */; };
 		F6FA23411E3A11E6006EA42B /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA233D1E3A0B91006EA42B /* Engine.swift */; };
 		F6FA23421E3A11FC006EA42B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA233F1E3A0C14006EA42B /* APIManager.swift */; };
+		F6FA23471E3A30FA006EA42B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA23461E3A30FA006EA42B /* DataManager.swift */; };
+		F6FA23481E3A32A2006EA42B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA23461E3A30FA006EA42B /* DataManager.swift */; };
+		F6FA234A1E3A3603006EA42B /* Manufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA23491E3A3603006EA42B /* Manufacturer.swift */; };
+		F6FA234C1E3A3700006EA42B /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA234B1E3A3700006EA42B /* PaginationModel.swift */; };
+		F6FA234D1E3A37FA006EA42B /* Manufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA23491E3A3603006EA42B /* Manufacturer.swift */; };
+		F6FA234E1E3A37FD006EA42B /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA234B1E3A3700006EA42B /* PaginationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +56,9 @@
 		F6FA23331E3A0A2A006EA42B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6FA233D1E3A0B91006EA42B /* Engine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		F6FA233F1E3A0C14006EA42B /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F6FA23461E3A30FA006EA42B /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F6FA23491E3A3603006EA42B /* Manufacturer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manufacturer.swift; sourceTree = "<group>"; };
+		F6FA234B1E3A3700006EA42B /* PaginationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,7 @@
 		F6FA231B1E3A0A2A006EA42B /* JustTest */ = {
 			isa = PBXGroup;
 			children = (
+				F6FA23431E3A2FA3006EA42B /* Model */,
 				F6FA233C1E3A0B73006EA42B /* Core */,
 				F6FA231C1E3A0A2A006EA42B /* AppDelegate.swift */,
 				F6FA231E1E3A0A2A006EA42B /* ViewController.swift */,
@@ -129,8 +139,18 @@
 			children = (
 				F6FA233D1E3A0B91006EA42B /* Engine.swift */,
 				F6FA233F1E3A0C14006EA42B /* APIManager.swift */,
+				F6FA23461E3A30FA006EA42B /* DataManager.swift */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		F6FA23431E3A2FA3006EA42B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F6FA23491E3A3603006EA42B /* Manufacturer.swift */,
+				F6FA234B1E3A3700006EA42B /* PaginationModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FDFD674850647385CD208C22 /* Pods */ = {
@@ -348,7 +368,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6FA234A1E3A3603006EA42B /* Manufacturer.swift in Sources */,
+				F6FA234C1E3A3700006EA42B /* PaginationModel.swift in Sources */,
 				F6FA23401E3A0C14006EA42B /* APIManager.swift in Sources */,
+				F6FA23471E3A30FA006EA42B /* DataManager.swift in Sources */,
 				F6FA231F1E3A0A2A006EA42B /* ViewController.swift in Sources */,
 				F6FA233E1E3A0B91006EA42B /* Engine.swift in Sources */,
 				F6FA231D1E3A0A2A006EA42B /* AppDelegate.swift in Sources */,
@@ -360,6 +383,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6FA23421E3A11FC006EA42B /* APIManager.swift in Sources */,
+				F6FA234E1E3A37FD006EA42B /* PaginationModel.swift in Sources */,
+				F6FA234D1E3A37FA006EA42B /* Manufacturer.swift in Sources */,
+				F6FA23481E3A32A2006EA42B /* DataManager.swift in Sources */,
 				F6FA23321E3A0A2A006EA42B /* JustTestTests.swift in Sources */,
 				F6FA23411E3A11E6006EA42B /* Engine.swift in Sources */,
 			);

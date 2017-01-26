@@ -11,6 +11,10 @@ import XCTest
 
 class JustTestTests: XCTestCase {
     
+    // I Love Volkswagen :-)
+    let manufacturerIdVW = "905"
+    let manufacturerName = "let manufacturer"
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,10 +27,10 @@ class JustTestTests: XCTestCase {
     
     //MARK: - API
     
-    func testApiGetCarsList() {
-        runAsyncTest(description: "API: Get Cars List") { (expectation) -> (Void) in
+    func testApiGetManufacturersList() {
+        runAsyncTest(description: "API: Get Manufacturers List") { (expectation) -> (Void) in
             
-            Engine.sharedInstance.apiMamanger.getCarsList(withPage: 0, pageSize: 15) { (json, error) -> (Void) in
+            Engine.sharedInstance.apiMamanger.getManufacturersList(withPage: 0, pageSize: 15) { (json, error) -> (Void) in
                 XCTAssertNotNil(json)
                 XCTAssertNil(error)
                 expectation.fulfill()
@@ -34,10 +38,9 @@ class JustTestTests: XCTestCase {
         }
     }
     
-    func testApiGetCarTypes() {
+    func testApiGetModelTypes() {
         runAsyncTest(description: "API: Get Ford types") { (expectation) -> (Void) in
-            let fordId = 285
-            Engine.sharedInstance.apiMamanger.getCarType(withCarId: fordId, page: 0, pageSize: 15, callback: { (json, error) -> (Void) in
+            Engine.sharedInstance.apiMamanger.getModelTypes(withManufacturerId: self.manufacturerIdVW, page: 0, pageSize: 15, callback: { (json, error) -> (Void) in
                 XCTAssertNotNil(json)
                 XCTAssertNil(error)
                 expectation.fulfill()
@@ -45,15 +48,56 @@ class JustTestTests: XCTestCase {
         }
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    //MARK: - Data
+    
+    func testDataGetManufacturersList(){
+        runAsyncTest(description: "DATA: Get Manufacturers List") { (expectation) -> (Void) in
+            let pagination = PaginationModel()
+            Engine.sharedInstance.dataManager.getManufacturer(with: pagination, callback: { (newPagination, manufacturers, error) -> (Void) in
+                XCTAssertNotNil(newPagination)
+                XCTAssertNotNil(manufacturers)
+                XCTAssertNil(error)
+                
+                XCTAssertEqual(pagination.page, newPagination!.page)
+                XCTAssert(manufacturers!.count > 0)
+                
+                XCTAssertNotNil(manufacturers!.first?.name)
+                XCTAssertNotNil(manufacturers!.first?.manufacturerID)
+                XCTAssertEqual(manufacturers!.first?.name, "Abarth")
+                XCTAssert(manufacturers!.first?.modelTypes.count == 0)
+                
+                expectation.fulfill()
+            })
         }
     }
     
-    //MARK: - Helpers
+    func testDataGetModelTypes() {
+        runAsyncTest(description: "DATA: Get VW Model types") { (expectation) -> (Void) in
+            let pagination = PaginationModel()
+            let manufacturer = Manufacturer(idValue: self.manufacturerIdVW, name: self.manufacturerName)
+            
+            Engine.sharedInstance.dataManager.getModelTypesFor(manufacturer: manufacturer,
+                                                               pagination: pagination,
+                                                               callback:
+                { (newPagination, modelTypes, error) -> (Void) in
+                    XCTAssertNotNil(newPagination)
+                    XCTAssertNotNil(modelTypes)
+                    XCTAssertNil(error)
+                    
+                    XCTAssertEqual(pagination.page, newPagination!.page)
+                    XCTAssert(modelTypes!.count > 0)
+                    
+                    XCTAssertNotNil(modelTypes!.first)
+                    XCTAssertEqual(modelTypes!.first, "Amarok")
+                    
+                    expectation.fulfill()
+            })
+        }
+    }
     
+    
+    
+    //MARK: - Helpers
     
     func runAsyncTest(description: String, testCode: @escaping (XCTestExpectation) -> (Void))  {
         let asyncExpectation = expectation(description: description)
@@ -66,5 +110,5 @@ class JustTestTests: XCTestCase {
             }
         }
     }
-    
 }
+
