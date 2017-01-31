@@ -9,8 +9,37 @@
 /* Begin PBXBuildFile section */
 		6594CC2B14A83A9F360145EB /* Pods_JustTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 651BA6F0D88FA10366F2FC83 /* Pods_JustTestTests.framework */; };
 		C01A3F5330CB6D9E47F05BF1 /* Pods_JustTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8BF2F27FD8220007354957 /* Pods_JustTest.framework */; };
+		F6154DAF1E3D1EEA005902AB /* ManufacturerScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DAE1E3D1EEA005902AB /* ManufacturerScreenModel.swift */; };
+		F6154DB01E3D1EEA005902AB /* ManufacturerScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DAE1E3D1EEA005902AB /* ManufacturerScreenModel.swift */; };
+		F6154DB21E3D29B2005902AB /* ModelTypesScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DB11E3D29B2005902AB /* ModelTypesScreenModel.swift */; };
+		F6154DB31E3D29B2005902AB /* ModelTypesScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DB11E3D29B2005902AB /* ModelTypesScreenModel.swift */; };
+		F6154DB51E3D2C07005902AB /* BaseTableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DB41E3D2C07005902AB /* BaseTableViewModelProtocol.swift */; };
+		F6154DB61E3D2C07005902AB /* BaseTableViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DB41E3D2C07005902AB /* BaseTableViewModelProtocol.swift */; };
+		F6154DB91E3D35ED005902AB /* ManufacturerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DB81E3D35ED005902AB /* ManufacturerTableViewController.swift */; };
+		F6154DBA1E3D35ED005902AB /* ManufacturerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DB81E3D35ED005902AB /* ManufacturerTableViewController.swift */; };
+		F6154DBC1E3D36F7005902AB /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DBB1E3D36F7005902AB /* BaseTableViewController.swift */; };
+		F6154DBD1E3D36F7005902AB /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DBB1E3D36F7005902AB /* BaseTableViewController.swift */; };
+		F6154DC21E3D478A005902AB /* ManufacturerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DC01E3D478A005902AB /* ManufacturerTableViewCell.swift */; };
+		F6154DC31E3D478A005902AB /* ManufacturerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DC01E3D478A005902AB /* ManufacturerTableViewCell.swift */; };
+		F6154DC41E3D478A005902AB /* ManufacturerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6154DC11E3D478A005902AB /* ManufacturerTableViewCell.xib */; };
+		F6154DC51E3D478A005902AB /* ManufacturerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6154DC11E3D478A005902AB /* ManufacturerTableViewCell.xib */; };
+		F6154DC91E3D4B63005902AB /* ManufacturerTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DC81E3D4B63005902AB /* ManufacturerTableViewCellModel.swift */; };
+		F6154DCA1E3D4B63005902AB /* ManufacturerTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6154DC81E3D4B63005902AB /* ManufacturerTableViewCellModel.swift */; };
+		F6A724821E3F3E5400F335AD /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A724811E3F3E5400F335AD /* UIViewController+Alert.swift */; };
+		F6A724831E3F3E5400F335AD /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A724811E3F3E5400F335AD /* UIViewController+Alert.swift */; };
+		F6A724851E3F5E2400F335AD /* NetworkingManagerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A724841E3F5E2400F335AD /* NetworkingManagerAlamofire.swift */; };
+		F6A724861E3F5E2400F335AD /* NetworkingManagerAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A724841E3F5E2400F335AD /* NetworkingManagerAlamofire.swift */; };
+		F6A8E6661E3E13E700406776 /* CarModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A8E6641E3E13E700406776 /* CarModelTableViewCell.swift */; };
+		F6A8E6671E3E13E700406776 /* CarModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A8E6641E3E13E700406776 /* CarModelTableViewCell.swift */; };
+		F6A8E6681E3E13E700406776 /* CarModelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A8E6651E3E13E700406776 /* CarModelTableViewCell.xib */; };
+		F6A8E6691E3E13E700406776 /* CarModelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A8E6651E3E13E700406776 /* CarModelTableViewCell.xib */; };
+		F6A8E66B1E3E1A1300406776 /* CarModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A8E66A1E3E1A1300406776 /* CarModelViewModel.swift */; };
+		F6A8E66C1E3E1A1500406776 /* CarModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A8E66A1E3E1A1300406776 /* CarModelViewModel.swift */; };
+		F6A8E66E1E3E1B8700406776 /* CarModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A8E66D1E3E1B8700406776 /* CarModelTableViewController.swift */; };
+		F6A8E66F1E3E1B8700406776 /* CarModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A8E66D1E3E1B8700406776 /* CarModelTableViewController.swift */; };
+		F6DBE5181E3FF7D40037C6F3 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBE5171E3FF7D40037C6F3 /* MockNetworkingManager.swift */; };
+		F6DBE5191E3FF7D40037C6F3 /* MockNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DBE5171E3FF7D40037C6F3 /* MockNetworkingManager.swift */; };
 		F6FA231D1E3A0A2A006EA42B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA231C1E3A0A2A006EA42B /* AppDelegate.swift */; };
-		F6FA231F1E3A0A2A006EA42B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6FA231E1E3A0A2A006EA42B /* ViewController.swift */; };
 		F6FA23221E3A0A2A006EA42B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FA23201E3A0A2A006EA42B /* Main.storyboard */; };
 		F6FA23241E3A0A2A006EA42B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6FA23231E3A0A2A006EA42B /* Assets.xcassets */; };
 		F6FA23271E3A0A2A006EA42B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6FA23251E3A0A2A006EA42B /* LaunchScreen.storyboard */; };
@@ -44,9 +73,23 @@
 		68DD2B480D6744B6AEE5C865 /* Pods-JustTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustTestTests/Pods-JustTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1BB6CC5C95536DE6C2C7CA8 /* Pods-JustTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustTest/Pods-JustTest.debug.xcconfig"; sourceTree = "<group>"; };
 		AF8BF2F27FD8220007354957 /* Pods_JustTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6154DAE1E3D1EEA005902AB /* ManufacturerScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManufacturerScreenModel.swift; sourceTree = "<group>"; };
+		F6154DB11E3D29B2005902AB /* ModelTypesScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTypesScreenModel.swift; sourceTree = "<group>"; };
+		F6154DB41E3D2C07005902AB /* BaseTableViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewModelProtocol.swift; sourceTree = "<group>"; };
+		F6154DB81E3D35ED005902AB /* ManufacturerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManufacturerTableViewController.swift; sourceTree = "<group>"; };
+		F6154DBB1E3D36F7005902AB /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		F6154DC01E3D478A005902AB /* ManufacturerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManufacturerTableViewCell.swift; sourceTree = "<group>"; };
+		F6154DC11E3D478A005902AB /* ManufacturerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManufacturerTableViewCell.xib; sourceTree = "<group>"; };
+		F6154DC81E3D4B63005902AB /* ManufacturerTableViewCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManufacturerTableViewCellModel.swift; sourceTree = "<group>"; };
+		F6A724811E3F3E5400F335AD /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		F6A724841E3F5E2400F335AD /* NetworkingManagerAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManagerAlamofire.swift; sourceTree = "<group>"; };
+		F6A8E6641E3E13E700406776 /* CarModelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelTableViewCell.swift; sourceTree = "<group>"; };
+		F6A8E6651E3E13E700406776 /* CarModelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarModelTableViewCell.xib; sourceTree = "<group>"; };
+		F6A8E66A1E3E1A1300406776 /* CarModelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelViewModel.swift; sourceTree = "<group>"; };
+		F6A8E66D1E3E1B8700406776 /* CarModelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarModelTableViewController.swift; sourceTree = "<group>"; };
+		F6DBE5171E3FF7D40037C6F3 /* MockNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkingManager.swift; sourceTree = "<group>"; };
 		F6FA23191E3A0A2A006EA42B /* JustTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6FA231C1E3A0A2A006EA42B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6FA231E1E3A0A2A006EA42B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6FA23211E3A0A2A006EA42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6FA23231E3A0A2A006EA42B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6FA23261E3A0A2A006EA42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +133,81 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6154DB71E3D35D1005902AB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6154DBB1E3D36F7005902AB /* BaseTableViewController.swift */,
+				F6154DB81E3D35ED005902AB /* ManufacturerTableViewController.swift */,
+				F6A8E66D1E3E1B8700406776 /* CarModelTableViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F6154DBE1E3D476D005902AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6154DB71E3D35D1005902AB /* ViewControllers */,
+				F6154DBF1E3D4775005902AB /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		F6154DBF1E3D4775005902AB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6154DC01E3D478A005902AB /* ManufacturerTableViewCell.swift */,
+				F6154DC11E3D478A005902AB /* ManufacturerTableViewCell.xib */,
+				F6A8E6641E3E13E700406776 /* CarModelTableViewCell.swift */,
+				F6A8E6651E3E13E700406776 /* CarModelTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		F6154DC61E3D4B34005902AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6154DB41E3D2C07005902AB /* BaseTableViewModelProtocol.swift */,
+				F6154DAE1E3D1EEA005902AB /* ManufacturerScreenModel.swift */,
+				F6154DB11E3D29B2005902AB /* ModelTypesScreenModel.swift */,
+				F6154DC71E3D4B43005902AB /* TableCellViewModel */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		F6154DC71E3D4B43005902AB /* TableCellViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F6154DC81E3D4B63005902AB /* ManufacturerTableViewCellModel.swift */,
+				F6A8E66A1E3E1A1300406776 /* CarModelViewModel.swift */,
+			);
+			name = TableCellViewModel;
+			sourceTree = "<group>";
+		};
+		F6A7247F1E3F3E2E00F335AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6A724801E3F3E3600F335AD /* UI Extensions */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		F6A724801E3F3E3600F335AD /* UI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6A724811E3F3E5400F335AD /* UIViewController+Alert.swift */,
+			);
+			name = "UI Extensions";
+			sourceTree = "<group>";
+		};
+		F6A724871E3F5E5500F335AD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F6FA233F1E3A0C14006EA42B /* APIManager.swift */,
+				F6A724841E3F5E2400F335AD /* NetworkingManagerAlamofire.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		F6FA23101E3A0A2A006EA42B = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +231,12 @@
 		F6FA231B1E3A0A2A006EA42B /* JustTest */ = {
 			isa = PBXGroup;
 			children = (
-				F6FA23431E3A2FA3006EA42B /* Model */,
-				F6FA233C1E3A0B73006EA42B /* Core */,
 				F6FA231C1E3A0A2A006EA42B /* AppDelegate.swift */,
-				F6FA231E1E3A0A2A006EA42B /* ViewController.swift */,
+				F6A7247F1E3F3E2E00F335AD /* Extensions */,
+				F6FA233C1E3A0B73006EA42B /* Core */,
+				F6FA23431E3A2FA3006EA42B /* Model */,
+				F6154DBE1E3D476D005902AB /* Views */,
+				F6154DC61E3D4B34005902AB /* ViewModel */,
 				F6FA23201E3A0A2A006EA42B /* Main.storyboard */,
 				F6FA23231E3A0A2A006EA42B /* Assets.xcassets */,
 				F6FA23251E3A0A2A006EA42B /* LaunchScreen.storyboard */,
@@ -129,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				F6FA23311E3A0A2A006EA42B /* JustTestTests.swift */,
+				F6DBE5171E3FF7D40037C6F3 /* MockNetworkingManager.swift */,
 				F6FA23331E3A0A2A006EA42B /* Info.plist */,
 			);
 			path = JustTestTests;
@@ -138,8 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				F6FA233D1E3A0B91006EA42B /* Engine.swift */,
-				F6FA233F1E3A0C14006EA42B /* APIManager.swift */,
 				F6FA23461E3A30FA006EA42B /* DataManager.swift */,
+				F6A724871E3F5E5500F335AD /* API */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -257,6 +378,8 @@
 			files = (
 				F6FA23271E3A0A2A006EA42B /* LaunchScreen.storyboard in Resources */,
 				F6FA23241E3A0A2A006EA42B /* Assets.xcassets in Resources */,
+				F6154DC41E3D478A005902AB /* ManufacturerTableViewCell.xib in Resources */,
+				F6A8E6681E3E13E700406776 /* CarModelTableViewCell.xib in Resources */,
 				F6FA23221E3A0A2A006EA42B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +388,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6154DC51E3D478A005902AB /* ManufacturerTableViewCell.xib in Resources */,
+				F6A8E6691E3E13E700406776 /* CarModelTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,11 +495,23 @@
 			files = (
 				F6FA234A1E3A3603006EA42B /* Manufacturer.swift in Sources */,
 				F6FA234C1E3A3700006EA42B /* PaginationModel.swift in Sources */,
+				F6154DC21E3D478A005902AB /* ManufacturerTableViewCell.swift in Sources */,
+				F6154DB21E3D29B2005902AB /* ModelTypesScreenModel.swift in Sources */,
+				F6154DC91E3D4B63005902AB /* ManufacturerTableViewCellModel.swift in Sources */,
+				F6A8E66B1E3E1A1300406776 /* CarModelViewModel.swift in Sources */,
 				F6FA23401E3A0C14006EA42B /* APIManager.swift in Sources */,
 				F6FA23471E3A30FA006EA42B /* DataManager.swift in Sources */,
-				F6FA231F1E3A0A2A006EA42B /* ViewController.swift in Sources */,
+				F6A8E6661E3E13E700406776 /* CarModelTableViewCell.swift in Sources */,
+				F6DBE5181E3FF7D40037C6F3 /* MockNetworkingManager.swift in Sources */,
+				F6154DBC1E3D36F7005902AB /* BaseTableViewController.swift in Sources */,
+				F6154DB51E3D2C07005902AB /* BaseTableViewModelProtocol.swift in Sources */,
 				F6FA233E1E3A0B91006EA42B /* Engine.swift in Sources */,
+				F6154DAF1E3D1EEA005902AB /* ManufacturerScreenModel.swift in Sources */,
+				F6A8E66E1E3E1B8700406776 /* CarModelTableViewController.swift in Sources */,
+				F6A724851E3F5E2400F335AD /* NetworkingManagerAlamofire.swift in Sources */,
 				F6FA231D1E3A0A2A006EA42B /* AppDelegate.swift in Sources */,
+				F6A724821E3F3E5400F335AD /* UIViewController+Alert.swift in Sources */,
+				F6154DB91E3D35ED005902AB /* ManufacturerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,11 +519,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6154DB01E3D1EEA005902AB /* ManufacturerScreenModel.swift in Sources */,
 				F6FA23421E3A11FC006EA42B /* APIManager.swift in Sources */,
+				F6154DC31E3D478A005902AB /* ManufacturerTableViewCell.swift in Sources */,
+				F6154DCA1E3D4B63005902AB /* ManufacturerTableViewCellModel.swift in Sources */,
+				F6A8E66C1E3E1A1500406776 /* CarModelViewModel.swift in Sources */,
+				F6154DBA1E3D35ED005902AB /* ManufacturerTableViewController.swift in Sources */,
 				F6FA234E1E3A37FD006EA42B /* PaginationModel.swift in Sources */,
 				F6FA234D1E3A37FA006EA42B /* Manufacturer.swift in Sources */,
+				F6154DB61E3D2C07005902AB /* BaseTableViewModelProtocol.swift in Sources */,
+				F6DBE5191E3FF7D40037C6F3 /* MockNetworkingManager.swift in Sources */,
 				F6FA23481E3A32A2006EA42B /* DataManager.swift in Sources */,
+				F6A8E6671E3E13E700406776 /* CarModelTableViewCell.swift in Sources */,
+				F6154DB31E3D29B2005902AB /* ModelTypesScreenModel.swift in Sources */,
 				F6FA23321E3A0A2A006EA42B /* JustTestTests.swift in Sources */,
+				F6154DBD1E3D36F7005902AB /* BaseTableViewController.swift in Sources */,
+				F6A724861E3F5E2400F335AD /* NetworkingManagerAlamofire.swift in Sources */,
+				F6A8E66F1E3E1B8700406776 /* CarModelTableViewController.swift in Sources */,
+				F6A724831E3F3E5400F335AD /* UIViewController+Alert.swift in Sources */,
 				F6FA23411E3A11E6006EA42B /* Engine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 36CLWK4HAE;
 				INFOPLIST_FILE = JustTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JustStan.JustTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,6 +686,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 36CLWK4HAE;
 				INFOPLIST_FILE = JustTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JustStan.JustTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

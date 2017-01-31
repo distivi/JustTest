@@ -11,7 +11,7 @@ import Foundation
 class PaginationModel: NSObject {
     let pageSize = 15
     var page = 0
-    var totalPageCount: Int!
+    var totalPageCount = 1 // always should be at least one page to load
     
     override init() {
         super.init()
@@ -21,5 +21,12 @@ class PaginationModel: NSObject {
         super.init()
         self.page = page
         self.totalPageCount = count
+    }
+    
+    var isCanLoad: Bool {
+        if page < totalPageCount {
+            return true
+        }
+        return false
     }
 }

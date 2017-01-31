@@ -25,6 +25,45 @@ class JustTestTests: XCTestCase {
         super.tearDown()
     }
     
+    //MARK: - Mock API
+    
+    func testMockApiGetManufacturersList() {
+        let apiMamanger = APIManager()
+        apiMamanger.networking = MockNetworkingManager()
+        
+        runAsyncTest(description: "API: Get Manufacturers List") { (expectation) -> (Void) in
+            
+            apiMamanger.getManufacturersList(withPage: 0, pageSize: 15) { (json, error) -> (Void) in
+                XCTAssertNotNil(json)
+                XCTAssertNil(error)
+                
+                let wkda = json?["wkda"] as! [String:Any]
+                let value = wkda["key1"] as! String
+                XCTAssertEqual(value, "Manufacturer 1")
+                
+                expectation.fulfill()
+            }
+        }
+    }
+    
+    func testMockApiGetManufacturersListFail() {
+        let mockNetworking = MockNetworkingManager()
+        mockNetworking.needToFail = true
+        
+        let apiMamanger = APIManager()
+        apiMamanger.networking = mockNetworking
+        
+        runAsyncTest(description: "API: Get Manufacturers List Should Fail") { (expectation) -> (Void) in
+            
+            apiMamanger.getManufacturersList(withPage: 0, pageSize: 15) { (json, error) -> (Void) in
+                XCTAssertNil(json)
+                XCTAssertNotNil(error)                
+                
+                expectation.fulfill()
+            }
+        }
+    }
+    
     //MARK: - API
     
     func testApiGetManufacturersList() {
@@ -33,6 +72,7 @@ class JustTestTests: XCTestCase {
             Engine.sharedInstance.apiMamanger.getManufacturersList(withPage: 0, pageSize: 15) { (json, error) -> (Void) in
                 XCTAssertNotNil(json)
                 XCTAssertNil(error)
+               
                 expectation.fulfill()
             }
         }
@@ -58,13 +98,13 @@ class JustTestTests: XCTestCase {
                 XCTAssertNotNil(manufacturers)
                 XCTAssertNil(error)
                 
-                XCTAssertEqual(pagination.page, newPagination!.page)
-                XCTAssert(manufacturers!.count > 0)
+                XCTAssertEqual(pagination.page, newPagination?.page)
+                XCTAssert((manufacturers?.count)! > 0)
                 
-                XCTAssertNotNil(manufacturers!.first?.name)
-                XCTAssertNotNil(manufacturers!.first?.manufacturerID)
-                XCTAssertEqual(manufacturers!.first?.name, "Abarth")
-                XCTAssert(manufacturers!.first?.modelTypes.count == 0)
+                XCTAssertNotNil(manufacturers?.first?.name)
+                XCTAssertNotNil(manufacturers?.first?.manufacturerID)
+                XCTAssertEqual(manufacturers?.first?.name, "Abarth")
+                XCTAssert(manufacturers?.first?.modelTypes.count == 0)
                 
                 expectation.fulfill()
             })
@@ -84,11 +124,11 @@ class JustTestTests: XCTestCase {
                     XCTAssertNotNil(modelTypes)
                     XCTAssertNil(error)
                     
-                    XCTAssertEqual(pagination.page, newPagination!.page)
-                    XCTAssert(modelTypes!.count > 0)
+                    XCTAssertEqual(pagination.page, newPagination?.page)
+                    XCTAssert((modelTypes?.count)! > 0)
                     
-                    XCTAssertNotNil(modelTypes!.first)
-                    XCTAssertEqual(modelTypes!.first, "Amarok")
+                    XCTAssertNotNil(modelTypes?.first)
+                    XCTAssertEqual(modelTypes?.first, "Amarok")
                     
                     expectation.fulfill()
             })
@@ -96,6 +136,29 @@ class JustTestTests: XCTestCase {
     }
     
     
+    //MARK: - Pagination
+    
+    func testLoadMoreDataManufacturers() {
+        runAsyncTest(description: "FETCH DATA: get manufactures from first 2 pages") { (expectation) -> (Void) in
+            let manufacturerScreenModel = ManufacturerScreenModel()
+            
+            manufacturerScreenModel.loadMoreData({ (success, error) -> (Void) in
+                XCTAssertTrue(success)
+                XCTAssertNil(error)
+                XCTAssertEqual(manufacturerScreenModel.manufactures.count, 15)
+                
+                manufacturerScreenModel.loadMoreData({ (success, error) -> (Void) in
+                    XCTAssertTrue(success)
+                    XCTAssertNil(error)
+                    XCTAssertEqual(manufacturerScreenModel.manufactures.count, 30)
+                    
+                    expectation.fulfill()
+                })
+            })
+        }
+    }
+    
+        
     
     //MARK: - Helpers
     

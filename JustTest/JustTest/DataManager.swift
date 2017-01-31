@@ -15,8 +15,7 @@ class DataManager: NSObject {
         Engine.sharedInstance.apiMamanger.getManufacturersList(withPage: pagination.page,
                                                                pageSize: pagination.pageSize)
         { (optJSON, error) -> (Void) in
-            if let json = optJSON as! Dictionary<String,Any>! {
-                
+            if let json = optJSON {
                 let newPagination = self.parsePagination(json: json)
                 let manufacturers = self.parseManufactures(json: json)
                 
@@ -34,7 +33,7 @@ class DataManager: NSObject {
                                                         page: pagination.page,
                                                         pageSize: pagination.pageSize)
         { (optJSON, error) -> (Void) in
-            if let json = optJSON as! Dictionary<String,Any>! {
+            if let json = optJSON {
                 
                 let newPagination = self.parsePagination(json: json)
                 let models = self.parseCarModels(json: json)
@@ -49,6 +48,13 @@ class DataManager: NSObject {
     
     
     // MARK: - parsers
+    
+    private func parseError(json: Dictionary<String, Any>) -> (Bool, String?) {
+        if let status = json["status"] as? Int {
+            print(status)
+        }
+        return (true, nil)
+    }
     
     private func parsePagination(json : Dictionary<String, Any>) -> PaginationModel {
         let page = json["page"] as! Int
